@@ -1,6 +1,392 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-	<body>
-	
-	</body>
+    <head>
+        <title>MedranoPortfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    <style>
+
+        *{
+            margin:0;
+            padding:0; 
+            box-sizing:border-box;
+            font-family:"Merriweather Sans";
+            scroll-behavior:smooth;
+        }
+        body{
+            background:#f7f5ef;
+        }
+
+       
+        nav{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:#c7d8de;
+            padding:15px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:1000;
+        }
+        #logo{
+            display:block;
+        }
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:30px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:#222;
+            font-size:14px;
+        }
+
+        section{
+            min-height:100vh;
+            padding:100px 8%;
+        }
+
+        .home{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .home-text{
+            width:60%;
+            background: #89A8B2;
+            padding:100px 50px;
+        
+        }
+        .home-text h1{
+            font-size:80px;
+            color:#222;
+            margin-bottom:20px;
+            justify-content: center;
+        }
+        .home-text p{
+            letter-spacing: 1.5px;
+            font-size:22px;
+            color:#555;
+            
+        }
+        .home-image{
+            width:50%;
+            height:800px;
+            background:#ddd;
+            display:flex;
+            align-items:center;
+            justify-content:right;
+            border-radius:10px;
+        }
+        .home-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:10px;
+         
+        }
+
+        .about{
+            display:flex;
+            align-items:center;
+            gap:100px;
+        }
+        .about-image{
+            width:2000px;
+            height:750px;
+            background:#a8c1ca;
+            padding:20px;
+            border-radius:20px;
+        }
+
+        .about-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:15px;
+        }
+
+        .about-content h2{
+            font-size:80px;
+            margin-bottom:15px;
+        }
+
+        .about-content p{
+            font-size:20px;
+            color:#555;
+            line-height:1.7;
+            margin-bottom:25px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .about-content h3{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+
+        .skills{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            font-size:20px;
+            color:#555;
+        }
+
+        .skills ul{
+            list-style:none;
+            
+        }
+
+        .skills li{
+            margin-bottom:8px;
+        }
+
+        .projects h2{
+            text-align:center;
+            font-size:55px;
+            margin-bottom:50px;
+        }
+
+        .project-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            height:430px;
+            border-radius:20px;
+            border:2px solid #a8c1ca;
+        }
+        .card h3{
+            margin-bottom:5px;
+        }
+        .card p{
+            color:#777;
+        }
+        .play{
+            display:flex;
+            justify-content:center;
+        }
+        .project-image{
+            width:100%;
+            height:390px;
+            object-fit:cover;
+            border-radius:15px;
+            margin-bottom:30px;
+            opacity:60%;
+        }
+
+
+        .contact{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .contact-info{
+            width:45%;
+        }
+
+        .contact-info h2{
+            font-size:70px;
+            color:#89A8B2;
+            margin-bottom:30px;
+        }
+
+        .contact-info p{
+            margin-bottom:50px;
+            color:#555;
+        }
+
+        .contact-form{
+            width:40%;
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            background:#c7d8de;
+            border-radius:8px;
+        }
+
+        .contact-form textarea{
+            height:150px;
+            resize:none;
+        }
+
+        .contact-form button{
+            background:#a8c1ca;
+            border:none;
+            padding:12px 25px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+        .socials{
+            letter-spacing:20px;
+            
+        }
+       
+        
+    </style>
+
+    </head>
+        <body>
+
+        <nav>
+            <img id="logo" src="36325639_51-Photoroom.png" width="100"/>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="home">
+
+            <div class="home-text">
+                <h1>Turning ideas into digital creations</h1>
+                <p>WEB DEVELOPER | VIDEO EDITOR | CONTENT CREATOR</p>
+            </div>
+            <div class="home-image">
+                <img id="logo" src="MEDRANO, HAILA CYRENE (1).jpg" width="200"/>
+            </div>
+            
+        </section>
+
+        <section id="about" class="about">
+
+            <div class="about-image">
+                <img src="DSC03447.jpg" alt="About Me">
+            </div>
+
+            <div class="about-content">
+                <h2>Hi! My Name is Haila Medrano</h2>
+
+                <p>
+                    I am a First Year IT student studying at University of St. Lasalle. 
+                    I'm a naturally curious person who loves learning in every way possible. 
+                    I like playing online games, reading fictional media, and being active in sports. 
+                    I am an experienced video editor for 7 years since 2019, 
+                    posting fan edits in social media, which I really enjoy doing.
+                </p>
+
+                <h3>My Skills</h3>
+
+                <div class="skills">
+
+                    <ul>
+                        <li><b>Softwares</b></li>
+                        <li>After Effects</li>
+                        <li>Figma</li>
+                        <li>Photoshop</li>
+                        <li>Codeblocks</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+
+                    <ul>
+                        <li><b>Video Editing</b></li>
+                        <li>Motion Graphics</li>
+                        <li>Typography</li>
+                        <li>3D</li>
+                        <li>Film</li>
+                    </ul>
+
+                    <ul>
+                        <li><b>Programming</b></li>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+      
+        <section id="projects" class="projects">
+
+            <h2>PROJECTS</h2>
+            
+            <div class="project-grid">
+                
+                <div class="card">
+                    <img src="film.jpg" alt="Project 1" class="project-image">
+                    <h3>Short Film</h3>
+                    <p>MM/DD/YYYY</p>
+                </div>
+                <div class="card">
+                    <img src="IMG_1900.jpg" alt="Project 1" class="project-image">
+                    <h3>Typography Edit</h3>
+                    <p>02/15/2025</p>
+                </div>
+                <div class="card">
+                    <img src="film 2.jpg" alt="Project 1" class="project-image">
+                    <h3>Short Film</h3>
+                    <p>MM/DD/YYYY</p>
+                </div>
+                <div class="card">
+                    <img src="IMG_1901.jpg" alt="Project 1" class="project-image">
+                    <h3>Silver Mavericks Trailer</h3>
+                    <p>10/13/2024</p>
+                </div>
+
+              
+
+            </div>
+
+        </section>
+
+       
+        <section id="contact" class="contact">
+
+            <div class="contact-info">
+
+                <h2>Let's work together!</h2>
+
+                <p>📍 Bacolod, Philippines</p>
+                <p>📞 +63 96XXXXXXXX</p>
+                <p>✉ haila.medrano@gmail.com</p>
+
+                <div class="socials">
+                    <i class="fa fa-instagram" style="font-size:36px; color:#89A8B2;"></i>
+                    <i class="fa fa-facebook-f" style="font-size:36px; color:#89A8B2;"></i>
+                    <i class="fa fa-youtube-play" style="font-size:36px; color:#89A8B2;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px; color:#89A8B2;"></i>
+                </div>
+                
+            </div>
+
+            <div class="contact-form">
+
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+
+            </div>
+
+        </section>
+
+        </body>
 </html>
